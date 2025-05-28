@@ -1,7 +1,9 @@
 // Home.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import HeroSection from './HeroSection';
 import styles from './Home.module.css';
+import ServicesSection from './ServicesSection'; 
 
 function Home() {
   const [dataMessage, setDataMessage] = useState("");
