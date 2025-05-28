@@ -1,0 +1,18 @@
+/* You can add this in App.css or a separate file imported in Home.js */
+.home-container {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.shape-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 20px;
+}
+
+.shape-divider svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
