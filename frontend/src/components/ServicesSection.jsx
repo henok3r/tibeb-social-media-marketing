@@ -10,11 +10,6 @@ const ServicesSection = () => {
         Our Services
       </Typography>
 
-      // Add this inside your Container in ServicesSection.jsx
-<Typography variant="h6" align="center" color="secondary">
-  Hello from ServicesSection!
-</Typography>
-
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={4}>
           <ServiceCard 

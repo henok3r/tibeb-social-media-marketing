@@ -1,33 +1,25 @@
 // App.js
 import React from "react";
-import { Routes, Route, useLocation, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import WhiteNav from "./components/WhiteNav"; // Your global white navigation
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Newsletter from "./components/Newsletter";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard"; // New Dashboard component
 import "./App.css";
+import PricingPage from "./components/PricingPage"; // New Pricing Page component
 
 function App() {
   const location = useLocation();
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Tibeb Social Media Marketing</h1>
-        <p>Empowering Your Brand's Digital Voice</p>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/testimonials">Testimonials</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/newsletter">Newsletter</Link></li>
-          </ul>
-        </nav>
-      </header>
+      {/* Global white navigation appears on every page */}
+      <WhiteNav />
       <main>
         <TransitionGroup>
           <CSSTransition key={location.pathname} timeout={300} classNames="page">
@@ -38,6 +30,9 @@ function App() {
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/newsletter" element={<Newsletter />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/pricing" element={<PricingPage />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>

@@ -1,18 +1,45 @@
-/* You can add this in App.css or a separate file imported in Home.js */
-.home-container {
-  padding: 40px 20px;
-  background-color: #fff;
+/* Home.module.css */
+.homeContainer {
+  background-color: #1A237E ; /* Blue background */
+  color: #ffffff; /* Default text color as white for contrast */
 }
 
-.shape-divider {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  margin-top: 20px;
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem;
 }
 
-.shape-divider svg {
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px;
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
+
+.navLink {
+  color: #ffffff; /* White text for nav links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #0b129c;
+}
+
+.welcomeSection {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.shapeDivider {
+  margin-top: 2rem;
+}
+footer {
+  background-color: #0D1333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+

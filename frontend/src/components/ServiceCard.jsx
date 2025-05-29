@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
 import { Box } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ title, description, icon: Icon }) => {
   return (
@@ -18,9 +19,10 @@ const ServiceCard = ({ title, description, icon: Icon }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" variant="outlined" color="primary">
-          Learn More
-        </Button>
+        <Button component={Link} to="/pricing" variant="outlined" color="primary" sx={{ mt: 2, display: 'block', mx: 'auto' }}>
+  Learn More
+</Button>
+
       </CardActions>
     </Card>
   );
